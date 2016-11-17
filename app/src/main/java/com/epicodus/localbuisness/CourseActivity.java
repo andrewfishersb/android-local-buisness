@@ -26,8 +26,8 @@ public class CourseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
         Intent mIntent = getIntent();
-        mMajor = mIntent.getStringArrayListExtra("major");
-        mCourses = mIntent.getStringArrayListExtra("courses");
+        mMajor = mIntent.getStringArrayListExtra("majorList");
+        mCourses = mIntent.getStringArrayListExtra("coursesList");
         String courseTitle = mIntent.getStringExtra("title");
         String courseInformation = mIntent.getStringExtra("courses");
         ButterKnife.bind(this);
@@ -48,17 +48,9 @@ public class CourseActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(CourseActivity.this, MainActivity.class);
                 myIntent.putExtra("major", mMajor);
                 myIntent.putExtra("courses", mCourses);
-                Toast.makeText(CourseActivity.this, mMajor.get(0), Toast.LENGTH_SHORT).show();
+                startActivity(myIntent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
-//    private void goHome() {
-//        Intent myIntent = new Intent(CourseActivity.this, MainActivity.class);
-//        myIntent.putExtra("major", mMajor);
-//        myIntent.putExtra("courses", mCourses);
-//        Toast.makeText(CourseActivity.this, mMajor.get(0), Toast.LENGTH_SHORT).show();
-//        startActivity(myIntent);
-//    }
 }

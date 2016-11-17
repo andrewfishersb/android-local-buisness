@@ -6,7 +6,8 @@
         android:allowBackup="true"
         android:icon="@drawable/psu"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:label="Portland State University">
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoActionBarTheme">
@@ -17,10 +18,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CourseActivity">
+            android:name=".CourseActivity"
+            android:label="">
         </activity>
         <activity android:name=".AddActivity"
-            >
+            android:label="">
         </activity>
 
     </application>

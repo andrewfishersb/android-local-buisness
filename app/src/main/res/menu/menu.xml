@@ -4,5 +4,6 @@
     <item
         android:title="Back to the Major"
         android:id="@+id/itemHome"
-        optionmenu:showAsAction="ifRoom"></item>
+        optionmenu:showAsAction="ifRoom"
+        ></item>
 </menu>

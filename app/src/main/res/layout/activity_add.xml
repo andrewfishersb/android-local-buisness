@@ -15,6 +15,7 @@
         android:id="@+id/addMajor"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/textinputborder"
         android:layout_marginTop="53dp"
         android:hint="Enter Major Title" />
 
@@ -29,6 +30,7 @@
         android:layout_alignEnd="@+id/addMajor"
         android:hint="Enter Major Description and any courses below"
         android:layout_above="@+id/submitMajor"
+
         android:gravity="top" />
 
     <Button
