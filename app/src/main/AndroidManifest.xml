@@ -17,13 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CourseActivity"
-            android:label="Back to All Majors">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.localbuisness.MainActivity"></meta-data>
+            android:name=".CourseActivity">
         </activity>
-        <activity android:name=".AddActivity"></activity>
+        <activity android:name=".AddActivity"
+            >
+        </activity>
+
     </application>
 
 </manifest>

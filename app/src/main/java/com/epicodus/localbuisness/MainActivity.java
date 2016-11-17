@@ -40,17 +40,25 @@ public class MainActivity extends AppCompatActivity {
 
         Intent mIntent = getIntent();
 
+        if (mIntent.getStringArrayListExtra("major") != null) {
+            mMajor = mIntent.getStringArrayListExtra("major");
+            mCourses = mIntent.getStringArrayListExtra("courses");
+        }
+
+
+
+
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mMajor);
         mMajorListView.setAdapter(adapter);
         mMajorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Intent myIntent = new Intent(MainActivity.this, CourseActivity.class);
-                myIntent.putExtra("courses", mCourses.get(position));
-                myIntent.putExtra("title", mMajor.get(position));
-                myIntent.putExtra("majorList", mMajor);
-                myIntent.putExtra("coursesList", mCourses);
-                startActivity(myIntent);
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        Intent myIntent = new Intent(MainActivity.this, CourseActivity.class);
+                        myIntent.putExtra("courses", mCourses.get(position));
+                        myIntent.putExtra("title", mMajor.get(position));
+                        myIntent.putExtra("majorList", mMajor);
+                        myIntent.putExtra("coursesList", mCourses);
+                        startActivity(myIntent);
             }
         });
 
