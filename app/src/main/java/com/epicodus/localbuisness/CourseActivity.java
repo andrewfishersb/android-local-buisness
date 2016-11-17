@@ -1,6 +1,7 @@
 package com.epicodus.localbuisness;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,6 +26,7 @@ public class CourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
+        Typeface font = Typeface.createFromAsset(getAssets(),"fonts/Capture_it.ttf");
         Intent mIntent = getIntent();
         mMajor = mIntent.getStringArrayListExtra("majorList");
         mCourses = mIntent.getStringArrayListExtra("coursesList");

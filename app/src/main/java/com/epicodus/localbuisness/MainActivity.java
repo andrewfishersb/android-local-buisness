@@ -1,6 +1,7 @@
 package com.epicodus.localbuisness;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,12 +34,17 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.majorListView) ListView mMajorListView;
     @Bind(R.id.addMajorButton) Button mAddMajorButton;
 
+    //views for fonts
+    @Bind(R.id.textView) TextView mAppNameTextView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        Typeface font = Typeface.createFromAsset(getAssets(),"fonts/Capture_it.ttf");
+        mAppNameTextView.setTypeface(font);
         Intent mIntent = getIntent();
 
         if (mIntent.getStringArrayListExtra("major") != null) {
@@ -49,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mMajor);
+
         mMajorListView.setAdapter(adapter);
         mMajorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -72,4 +80,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    
 }
