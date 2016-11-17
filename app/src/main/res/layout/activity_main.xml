@@ -9,30 +9,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.epicodus.localbuisness.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome To Portland State Univeristy"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="21sp"
-        android:id="@+id/headerTextView" />
-
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/majorListView"
-        android:layout_below="@+id/headerTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp" />
+        android:layout_below="@+id/textView"
+        android:layout_alignParentBottom="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Majors"
         android:textSize="25sp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="75dp"
         android:id="@+id/textView"
-        android:layout_below="@+id/headerTextView"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/welcome" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a Major"
+        android:id="@+id/addMajorButton"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
 </RelativeLayout>
