@@ -10,16 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class AddActivity extends AppCompatActivity {
-    @Bind(R.id.submitMajor) Button mAddMajorButton;
-    @Bind(R.id.courseInformation) EditText mCourseInformation;
+    @Bind(R.id.submitMajor)
+    Button mAddMajorButton;
+    @Bind(R.id.courseInformation)
+    EditText mCourseInformation;
     @Bind(R.id.addMajor) EditText mAddMajor;
     private ArrayList<String> mMajor = new ArrayList<String>();
     private ArrayList<String> mCourses = new ArrayList<String>();
@@ -80,5 +80,4 @@ public class AddActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
